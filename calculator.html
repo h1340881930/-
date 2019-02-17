@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>js</title>
+   <meta charset="utf-8">
+   <link rel="icon" type="image/x-icon" href="icon.jpg">
+   <style>
+       body {
+           background: url(bg.jpg) repeat;
+       }
+       * {
+       	   text-align: center;
+           color: pink;
+       }
+       #txt1,
+       #txt2 {
+       	   width: 300px;
+           height: 30px;
+           line-height: 30px;
+           font-size: 20px;
+       }
+       #op {
+       	   width: 50px;
+       	   height: 30px;
+       	   line-height: 30px;
+       	   font-size: 20px;
+       }
+   </style>
+   <script>
+       window.onload=function() {
+       	    document.getElementById("sum").onclick=function() {
+	     	    var num2 = document.getElementById("txt2").value;
+	       	    var num1 = document.getElementById("txt1").value;
+	       	    var op = document.getElementById("op").value;
+	       	    num1 = parseFloat(num1);
+                num2 = parseFloat(num2);
+	            switch(op){
+	            	case "+" : alert(num1 + num2);break;
+	            	case "-" : alert(num1 - num2);break;
+	            	case "*" : alert(num1 * num2);break;
+	            	case "/" : alert(num1 / num2);break;
+	            	case "%" : alert(num1 % num2);
+	            }
+     	    }
+       }
+   </script>
+</head>
+<body>
+	<h2>请输入两个纯数字，并选择运算符，可以得出两者的结果。</h2>
+	<br /> <br /> <br /> <br /> <br />
+	<div>
+		<input type="text"/ id="txt1"/>
+		<select id="op">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+	    <input type="text" id="txt2"/>
+	    <input type="button" id="sum" value='结果'/>
+    </div>
+</body>
+</html>
